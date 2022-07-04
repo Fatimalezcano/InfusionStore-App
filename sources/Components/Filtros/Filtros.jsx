@@ -23,8 +23,8 @@ export default function Filtros({ setSelected }) {
         items={[
           { label: "A-Z", value: "A-Z" },
           { label: "Z-A", value: "Z-A" },
-          { label: "Mayor a menor", value: "Highest SpoonScore" },
-          { label: "Menor a mayor", value: "Lowest SpoonScore" },
+          { label: "Precio Mayor a menor", value: "Highest SpoonScore" },
+          { label: "Precio Menor a mayor", value: "Lowest SpoonScore" },
         ]}
         placeholder={{ label: "Filtros:", value: null }}
       />
