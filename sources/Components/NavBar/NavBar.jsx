@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     backgroundColor: "rgba(194, 194, 194, 0.69)",
     color: "grey",
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
   },
 });
 
@@ -164,7 +164,7 @@ export default function NavBar({
           autoFocus={flag}
           showSoftInputOnFocus={flag}
           inputStyle={{
-            fontFamily: "PoppinsM",
+            fontFamily: "Poppins-M",
             fontSize: 15,
             color: "grey",
           }}

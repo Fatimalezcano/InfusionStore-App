@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     width: ANCHO_CONTENEDOR,
     height: ALTO_CONTENEDOR,
     resizeMode: "cover",
-    // resizeMethod: "contain",
+    // resizeMethod: "cover",
     // marginBottom: 10,
 
     // borderRadius: 15,

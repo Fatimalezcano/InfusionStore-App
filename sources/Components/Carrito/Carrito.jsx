@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   titulo: {
     position: "absolute",
     fontSize: 25,
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     top: 65,
     left: "20%",
     // marginBottom: "20%",
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 
   flatlist: {
     position: "relative",
-    top: "12%",
+    top: "15%",
     maxHeight: "70%",
     marginBottom: 20,
   },
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
 
   textoCarrito: {
     fontSize: 18,
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     position: "absolute",
     top: "40%",
     margin: 20,
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
   },
   monto: {
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     fontSize: 20,
   },
   botonCompra: {
@@ -109,14 +109,16 @@ const styles = StyleSheet.create({
     shadowColor: "black",
     shadowOffset: {
       width: 4,
-      height: 0,
+      height: 2,
     },
     shadowOpacity: 0.3,
     shadowRadius: 10,
+    elevation: 20,
+
     marginTop: 10,
   },
   textoBoton: {
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     fontSize: 18,
   },
 });
@@ -212,7 +214,7 @@ export default function Carrito() {
                   style={{
                     color: "grey",
                     fontSize: 12,
-                    fontFamily: "PoppinsM",
+                    fontFamily: "Poppins-M",
                   }}
                 >
                   x

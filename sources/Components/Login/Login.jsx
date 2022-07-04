@@ -22,32 +22,8 @@ import { useNavigation } from "@react-navigation/native";
 import { AntDesign } from "@expo/vector-icons";
 
 const styles = StyleSheet.create({
-  // btn: {
-  //   marginTop: 300,
-  //   width: 200,
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  //   alignSelf: "center",
-  //   backgroundColor: "#0893FC",
-  //   padding: 10,
-  //   borderRadius: 5,
-  // },
-
-  // text: {
-  //   left: "35%",
-  //   fontSize: 20,
-  // },
-
-  // login: {
-  //   color: "#fff",
-  //   fontSize: 20,
-  //   fontWeight: "500",
-  // },
-
   container: {
     flex: 1,
-    // justifyContent: "center",
-    // alignItems: "center",
   },
 
   volver: {
@@ -59,13 +35,12 @@ const styles = StyleSheet.create({
   },
 
   bienvenido: {
+    position: "absolute",
     top: "10%",
     width: "100%",
     textAlign: "center",
-    // left: "23%",
-    position: "absolute",
     fontSize: 35,
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     color: "rgba(67, 67, 67, 1)",
     // textShadowColor: "grey",
     // textShadowOffset: { width: 2, height: 3 },
@@ -76,9 +51,8 @@ const styles = StyleSheet.create({
     top: "15%",
     textAlign: "center",
     width: "100%",
-    // left: "15%",
     fontSize: 22,
-    fontFamily: "PoppinsR",
+    fontFamily: "Poppins-R",
     color: "rgba(67, 67, 67, 1)",
     marginTop: 20,
   },
@@ -91,7 +65,6 @@ const styles = StyleSheet.create({
 
   input: {
     backgroundColor: "white",
-
     paddingLeft: 10,
     paddingRight: 10,
     marginBottom: 20,
@@ -111,53 +84,51 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    width: "90%",
+    width: "100%",
     top: "38%",
-    left: "10%",
+    // left: "10%",
+    display: "flex",
+    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   button: {
     width: "90%",
-    padding: 15,
-    borderRadius: 10,
+    padding: 12,
+    borderRadius: 15,
     alignItems: "center",
     backgroundColor: "black",
   },
-
-  // buttonOutline: {
-  //   backgroundColor: "white",
-  //   marginTop: 5,
-  //   borderColor: "#0782F9",
-  //   borderWidth: 2,
-  // },
 
   textGoogle: {
     position: "absolute",
     bottom: "22%",
     right: "35%",
     fontSize: 15,
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     color: "grey",
   },
   contenedorRegistro: {
     position: "absolute",
     display: "flex",
     flexDirection: "row",
-
     width: "100%",
-
     bottom: "5%",
-    left: "12%",
+    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    // left: "12%",
   },
   textRegistro2: {
-    fontFamily: "PoppinsR",
+    fontFamily: "Poppins-R",
     fontSize: 15,
     color: "black",
     marginRight: 10,
   },
 
   textRegistro: {
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     fontSize: 15,
     color: "darkgrey",
   },
@@ -297,22 +268,22 @@ export default function Login({ flag, onAuth, setIsAuthenticated }) {
         />
       </View>
 
-      <Pressable style={styles.botonOlvidar} onPress={handleForgotPass}>
+      {/* <Pressable style={styles.botonOlvidar} onPress={handleForgotPass}>
         <Text
           style={{
-            fontFamily: "PoppinsR",
+            fontFamily: "Poppins-R",
             fontSize: 15,
             color: "rgba(115, 115, 115, 1)",
           }}
         >
           ¿Olvidaste la contraseña?
         </Text>
-      </Pressable>
+      </Pressable> */}
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={logIn}>
           <Text
-            style={{ fontFamily: "PoppinsM", fontSize: 20, color: "white" }}
+            style={{ fontFamily: "Poppins-M", fontSize: 20, color: "white" }}
           >
             Iniciar sesion
           </Text>

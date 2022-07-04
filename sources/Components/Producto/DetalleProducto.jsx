@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Pressable,
   ScrollView,
+  SafeAreaView,
 } from "react-native";
 import { AntDesign, Octicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
@@ -27,6 +28,7 @@ import Toast from "react-native-toast-message";
 
 const styles = StyleSheet.create({
   contProd: {
+    flex: 1,
     width: "100%",
     height: "100%",
     paddingTop: 45,
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     marginLeft: 30,
     marginRight: 30,
-    fontSize: 18,
+    fontSize: 15,
   },
 
   contFoto: {
@@ -66,13 +68,15 @@ const styles = StyleSheet.create({
 
   contDatos: {
     width: "100%",
-    height: 550,
+    height: 450,
     backgroundColor: "#333334",
-    borderRadius: 40,
-    paddingTop: "5%",
+    borderTopRightRadius: 40,
+    borderTopLeftRadius: 40,
+    // paddingTop: "5%",
     display: "flex",
+    // flexDirection: "column",
     position: "absolute",
-    top: 450,
+    top: 410,
   },
 
   volver: {
@@ -94,20 +98,22 @@ const styles = StyleSheet.create({
   numeros: {
     fontWeight: "bold",
     color: "white",
-    margin: 30,
-    fontSize: 30,
+    marginBottom: 20,
+    marginTop: 10,
+    marginLeft: 20,
+    fontSize: 25,
   },
 
   botones: {
     position: "absolute",
-    bottom: "20%",
+    bottom: "10%",
     left: 0,
     width: "100%",
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
     marginTop: 40,
-    marginBottom: 30,
+    // marginBottom: 30,
   },
 
   cantidad: {
@@ -117,15 +123,16 @@ const styles = StyleSheet.create({
   },
 
   pressable: {
-    position: "relative",
+    // position: "relative",
     color: "white",
     fontSize: 40,
     textAlign: "center",
     backgroundColor: "#414345",
     width: 60,
-    height: 60,
+    height: "100%",
     borderRadius: 15,
     // paddingBottom: 10,
+    padding: 0,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -139,13 +146,18 @@ const styles = StyleSheet.create({
 
   boton: {
     position: "absolute",
-    left: "10%",
-    top: "10%",
-    height: "80%",
-    width: "80%",
+    // left: "10%",
+    // top: "5%",
+    height: "100%",
+    width: "100%",
     color: "white",
+    borderRadius: 15,
+
     fontSize: 40,
+    display: "flex",
     textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
     backgroundColor: "#414345",
   },
 
@@ -173,13 +185,15 @@ const styles = StyleSheet.create({
   },
 
   agregar: {
+    // position: "relative",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     marginLeft: 15,
     width: 180,
-    height: 58,
+    height: 60,
     borderRadius: 15,
+    padding: 0,
 
     shadowColor: "#000",
     shadowOffset: {
@@ -193,9 +207,15 @@ const styles = StyleSheet.create({
   },
 
   letraBoton: {
+    position: "absolute",
+    height: "90%",
+    width: "100%",
     color: "white",
     fontSize: 30,
+    display: "flex",
     textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   num: {

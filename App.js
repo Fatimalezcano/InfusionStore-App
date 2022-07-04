@@ -51,23 +51,43 @@ const DismissKeyboard = ({ children }) => {
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
-const fetchFonts = async () => {
-  await Font.loadAsync({
-    Poppins: require("./assets/fonts/Poppins-Thin.ttf"),
-    PoppinsM: require("./assets/fonts/Poppins-Medium.ttf"),
-    PoppinsR: require("./assets/fonts/Poppins-Regular.ttf"),
-  });
-};
+// if (!fontsLoaded) {
+//   return <View />;
+// }
+
+// const fetchFonts = async () => {
+//   await Font.loadAsync({
+//     Poppins: require("./assets/fonts/Poppins-Thin.ttf"),
+//     "Poppins-M": require("./assets/fonts/Poppins-Medium.ttf"),
+//     "Poppins-R": require("./assets/fonts/Poppins-Regular.ttf"),
+//   });
+// };
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isBiometricAvailable, setIsBiometricAvailable] = useState(false);
   const [flag, setFlag] = useState(false);
 
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  const loadFonts = async () =>
+    await Font.loadAsync({
+      Poppins: require("./assets/fonts/Poppins-Thin.ttf"),
+      "Poppins-M": require("./assets/fonts/Poppins-Medium.ttf"),
+      "Poppins-R": require("./assets/fonts/Poppins-Regular.ttf"),
+    });
+
+  useEffect(() => {
+    if (!fontsLoaded) {
+      loadFonts();
+    }
+    setFontsLoaded(true);
+  }, []);
+
   StatusBar.setBarStyle("dark-content", true);
 
   useEffect(() => {
-    fetchFonts();
+    loadFonts();
 
     (async () => {
       const compatible = await LocalAuthentication.hasHardwareAsync();

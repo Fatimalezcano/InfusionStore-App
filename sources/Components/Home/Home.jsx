@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 
   productosTitulo: {
     fontSize: 18,
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     color: "#222",
     fontWeight: "700",
     marginTop: 40,
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
 
   nombre: {
     fontSize: 15,
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     color: "#222",
 
     textAlign: "center",
@@ -186,7 +186,9 @@ export default function Home({ navigation }) {
                       source={{ uri: item.imagen }}
                       style={styles.imagen}
                     />
-                    <Text style={styles.nombre}>{item.nombre}</Text>
+                    <Text style={styles.nombre}>
+                      {item.nombre.slice(0, 20)}
+                    </Text>
                   </AnimatedPressable>
                 );
               }}

@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Image,
   TouchableWithoutFeedback,
+  ScrollView,
 } from "react-native";
 
 const styles = StyleSheet.create({
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
   },
 
   precio: {
-    position: "absolute",
+    // position: "absolute",
     bottom: 0,
     // marginTop: 5,
     fontWeight: "bold",
@@ -61,14 +62,14 @@ function Producto(props) {
         <View style={styles.contFoto}>
           <Image source={props.imagen} style={styles.img} />
         </View>
-        <View style={styles.contDatos}>
+        <ScrollView style={styles.contDatos}>
           <Text style={styles.nombre}>{props.nombre}</Text>
           <Text>Stock: {props.stock}</Text>
-          <Text>{props.descripcion.slice(0, 100)}</Text>
+          <Text>{props.descripcion.slice(0, 90)}</Text>
           <Text style={styles.precio}>
             ${props.precio.toLocaleString("es-ES")}
           </Text>
-        </View>
+        </ScrollView>
       </View>
     </TouchableWithoutFeedback>
   );

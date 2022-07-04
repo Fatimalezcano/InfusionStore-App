@@ -20,12 +20,12 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   nombre: {
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     fontSize: 15,
     maxWidth: "60%",
   },
   precio: {
-    // fontFamily: "PoppinsM",
+    // fontFamily: "Poppins-M",
     fontSize: 12,
     fontWeight: "bold",
     marginBottom: 10,
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#e1d7d7",
     borderRadius: 8,
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     height: 30,
     alignItems: "center",
   },

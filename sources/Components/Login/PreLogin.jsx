@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     height: 80,
     backgroundColor: "rgba(255, 255, 255, 0.46)",
     borderRadius: 100,
+    textAlign: "center",
     alignItems: "center",
     justifyContent: "center",
     shadowColor: "black",
@@ -35,23 +36,27 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.4,
     shadowRadius: 10,
-    margin: 5,
+    // margin: 5,
   },
   titulo: {
     position: "absolute",
+    width: "100%",
     top: "15%",
-    left: "18%",
+    // left: "18%",
+    textAlign: "center",
     color: "white",
     fontSize: 40,
     fontFamily: "Poppins",
-    margin: 10,
+    // margin: 10,
   },
   botones: {
     position: "absolute",
+    width: "100%",
     display: "flex",
     flexDirection: "column",
-    // alignItems: "center",
-    left: "15%",
+    alignItems: "center",
+    // left: "15%",
+    textAlign: "center",
     bottom: "10%",
   },
   botonIniciar: {
@@ -92,7 +97,18 @@ export default function PreLogin() {
         style={styles.image}
       >
         <View style={styles.icono}>
-          <Fontisto name="coffeescript" size={38} color="white" />
+          <Fontisto
+            style={{
+              width: "100%",
+              // height: "100%",
+              textAlign: "center",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+            name="coffeescript"
+            size={38}
+            color="white"
+          />
         </View>
         <Text style={styles.titulo}>Infusion Store</Text>
 
@@ -108,7 +124,7 @@ export default function PreLogin() {
             //   style={styles.botonIniciar}
           >
             <Text
-              style={{ fontFamily: "PoppinsM", fontSize: 20, color: "white" }}
+              style={{ fontFamily: "Poppins-M", fontSize: 20, color: "white" }}
             >
               Iniciar sesion
             </Text>
@@ -125,7 +141,7 @@ export default function PreLogin() {
             // style={styles.botonRegistrar}
           >
             <Text
-              style={{ fontFamily: "PoppinsM", fontSize: 20, color: "black" }}
+              style={{ fontFamily: "Poppins-M", fontSize: 20, color: "black" }}
             >
               Registrarse
             </Text>

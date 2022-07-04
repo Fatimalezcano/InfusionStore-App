@@ -24,7 +24,7 @@ const Image = styled.Image`
 `;
 
 const Saludo = styled.Text`
-  font-family: PoppinsM;
+  font-family: Poppins-M;
   font-size: 16;
   font-weight: 600;
   margin: 2%;

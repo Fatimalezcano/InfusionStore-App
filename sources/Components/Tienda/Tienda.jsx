@@ -56,7 +56,7 @@ const Tienda = ({ navigation }) => {
   const scrollRef = useRef();
 
   useEffect(() => {
-    console.log(isFocused, "tienda");
+    // console.log(isFocused, "tienda");
     if (!isFocused) {
       Keyboard.dismiss();
       dispatch(setProductosFiltrados(data));

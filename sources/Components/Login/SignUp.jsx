@@ -43,9 +43,8 @@ const styles = StyleSheet.create({
     top: "10%",
     width: "100%",
     textAlign: "center",
-    // left: "35%",
     fontSize: 35,
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     color: "rgba(67, 67, 67, 1)",
   },
   saludo2: {
@@ -54,7 +53,7 @@ const styles = StyleSheet.create({
     width: "100%",
     textAlign: "center",
     fontSize: 22,
-    fontFamily: "PoppinsR",
+    fontFamily: "Poppins-R",
     color: "rgba(67, 67, 67, 1)",
     marginTop: 20,
   },
@@ -78,15 +77,18 @@ const styles = StyleSheet.create({
   },
 
   buttonContainer: {
-    width: "90%",
+    width: "100%",
     top: "3%",
-    left: "5%",
+    display: "flex",
+    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   button: {
-    width: "90%",
-    padding: 15,
-    borderRadius: 10,
+    width: "80%",
+    padding: 12,
+    borderRadius: 15,
     alignItems: "center",
     backgroundColor: "black",
   },
@@ -95,7 +97,7 @@ const styles = StyleSheet.create({
     bottom: "18%",
     right: "35%",
     fontSize: 15,
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     color: "grey",
   },
 
@@ -103,17 +105,20 @@ const styles = StyleSheet.create({
     position: "absolute",
     flexDirection: "row",
     width: "100%",
-    bottom: 30,
-    left: "20%",
+    bottom: "5%",
+    textAlign: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    // left: "20%",
   },
   textRegistro2: {
-    fontFamily: "PoppinsR",
+    fontFamily: "Poppins-R",
     fontSize: 15,
     color: "black",
     marginRight: 10,
   },
   textRegistro: {
-    fontFamily: "PoppinsM",
+    fontFamily: "Poppins-M",
     fontSize: 15,
     color: "darkgrey",
   },
@@ -251,7 +256,7 @@ export default function SignUp({ setIsAuthenticated }) {
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={createUser}>
           <Text
-            style={{ fontFamily: "PoppinsM", fontSize: 20, color: "white" }}
+            style={{ fontFamily: "Poppins-M", fontSize: 20, color: "white" }}
           >
             Registrarse
           </Text>
